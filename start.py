@@ -23,7 +23,7 @@ for group in oldchanges:
     if formatChanges == None:
         txt = "Помилка на сайті парсингу - перевірте сайт - https://rcnubip.org.ua/studentu/zmini-do-rozkladu/"
     else: txt += f"\n===========================\nГрупа: {group}\nЗаміни:\n"+formatChanges(oldchanges, group)+"==========================="
-bot.say(f"Поточний стан на {data}:\n"+txt)
+bot.say(f"Поточний стан на {data}:\n"+txt) print(f"Запис за {data}")
 
 while True:
     try:
