@@ -1,4 +1,5 @@
 import shedule, tg
+from datetime import datetime
 
 def formatChanges(chg, grp):
     message = ""
@@ -7,6 +8,8 @@ def formatChanges(chg, grp):
     return message
 
 nazar = 5900123750
+
+data = datetime.now().strftime("%d.%m %T")
 
 bot = tg.Tg("5982028350:AAHmLCVVvX0t5ZNwY4CShrehfqlXtMERfUw", nazar)
 
@@ -20,7 +23,7 @@ for group in oldchanges:
     if formatChanges == None:
         txt = "Помилка на сайті парсингу - перевірте сайт - https://rcnubip.org.ua/studentu/zmini-do-rozkladu/"
     else: txt += f"\n===========================\nГрупа: {group}\nЗаміни:\n"+formatChanges(oldchanges, group)+"==========================="
-bot.say("Поточний стан:\n"+txt)
+bot.say(f"Поточний стан на {data}:\n"+txt)
 
 while True:
     try:
