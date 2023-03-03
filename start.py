@@ -21,7 +21,7 @@ oldchanges = myshedule.getGroupsChanges(groups)
 txt = ""
 for group in oldchanges:
     if formatChanges == None:
-        txt = "Помилка на сайті парсингу - перевірте сайт - https://rcnubip.org.ua/studentu/zmini-do-rozkladu/"
+        txt = "Помилка на сайті, перевірте сайт - https://rcnubip.org.ua/studentu/zmini-do-rozkladu/"
     else: txt += f"\n===========================\nГрупа: {group}\nЗаміни:\n"+formatChanges(oldchanges, group)+"==========================="
 bot.say(f"Поточний стан на {data}:\n"+txt)
 print(f"Запис за {data}")
@@ -35,9 +35,10 @@ while True:
             message = ""
             for group in changes:
                 if changes[group] != oldchanges[group]:
-                    message += f"Зафіксовані зміни в розкладі {group}:\n\n"
+                    message += f"Зафіксовані зміни в розкладі {group}:\n"
                     message += formatChanges(changes, group)
             bot.say(message)
+            print(f"Запис змін за {data}")
 
             oldchanges = changes
 
