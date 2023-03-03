@@ -35,7 +35,7 @@ while True:
             message = ""
             for group in changes:
                 if changes[group] != oldchanges[group]:
-                    message += f"Зафіксовані зміни в розкладі {group}:\n"
+                    message += f"Зафіксовані зміни в розкладі {group}:\n\n"
                     message += formatChanges(changes, group)
             bot.say(message)
 
