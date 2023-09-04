@@ -11,7 +11,7 @@ nazar = 5900123750
 
 data = datetime.now().strftime("%d.%m %T")
 
-bot = tg.Tg("5982028350:AAHmLCVVvX0t5ZNwY4CShrehfqlXtMERfUw", nazar)
+bot = tg.Tg("6681834166:AAG8o3CrSpcsRvRwIPbrqjiVLtNY5Ug1cGg", nazar)
 
 groups = ["43-ІП"]
 
