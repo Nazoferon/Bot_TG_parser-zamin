@@ -7,11 +7,11 @@ def formatChanges(chg, grp):
         message += f"Пара №{change['num']} - {change['name']}\n"
     return message
 
-nazar = your_ID_Telegram
+user_1 = your_ID_Telegram
 
 data = datetime.now().strftime("%d.%m %T")
 
-bot = tg.Tg("6681834166:AAG8o3CrSpcsRvRwIPbrqjiVLtNY5Ug1cGg", nazar)
+bot = tg.Tg("ID_TOKEN_BOT", user_1)
 
 groups = ["43-ІП"]
 
