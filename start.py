@@ -7,7 +7,7 @@ def formatChanges(chg, grp):
         message += f"Пара №{change['num']} - {change['name']}\n"
     return message
 
-nazar = 5900123750
+nazar = your_ID_Telegram
 
 data = datetime.now().strftime("%d.%m %T")
 
